@@ -6,29 +6,68 @@
         <meta name="description" content="Сайт продажи качественных самогонных аппаратов по доступной цене">
         <meta name="keywords" content="самогон, аппарат, самогоноварение, дистиллятор">
         <meta name="author" content="Mishanin Aleksey">
+        <style>
+            #page {background: url("image/main.jpg") center; background-size: cover; color: blueviolet; height: 100vh }
+            #header{text-align: center; position: fixed; top: 5%;}
+            .main {color: blue}
+            #nav {position: fixed; top: 35%;}
+            #section {position: fixed; top: 50%;}
+            #footer {position: fixed; top: 95%; color: black}
+        </style>
     </head>
     <body>
-        <table style="width:100%; background-color: bisque">
-            <tr>
-                <th>
-                    Магазин ценителей алкогольной продукции
-                </th>
-                <td>
-                    <a href="catalog.html">Каталог</a>
-                </td>
-                <td>
-                    <a href="delivery.html">Доставка</a>
-                </td>
-                <td>
-                    <a href="contact.html">Контакты</a>
-                </td>
-                <td>
-                    <a href="#">Отзывы</a>
-                </td>
-            </tr>
-        </table>
-        <img src="image/main.jpg" style="display:block; width:100%; height:100%;" alt="Фон главного окна">
-        <hr>
-        <sup style="background-color: darkgray">@Все права защищены 2018-2019</sup>
+        <div id="page">
+            <div id="header">
+            <header>
+                <h1>Магазин для ценителей алкогольной продукции</h1><hr>
+            </header>
+            </div>
+            <div id="nav">
+            <nav>
+                <strong>Главное меню</strong>
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <span class="main">
+                                Главная
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="catalog.html">
+                            <span class="main">
+                                Каталог
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.html">
+                            <span class="main">
+                                Контакты
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            </div>
+            <div id="section">
+            <section>
+                <p>
+                    Самогонные аппараты, пивоварни, автоклавы и многое другое
+                </p>
+                <p>
+                    С доставкой по всей России
+                </p>
+                <p>
+                    Готовьте у себя дома вкусные, качественные напитки и продукты экономя свою буджет
+                </p>
+            </section>
+            </div>
+            <div id="footer">
+                <footer>
+                    <hr>Copyright &copy; Все права защищены 2018-2019
+                </footer>
+            </div>
+        </div>
     </body>
 </html>
