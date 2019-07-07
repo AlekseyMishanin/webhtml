@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400i&display=swap&subset=cyrillic');
+
+html, body {
+    height: 100%;
+    background: #f8f8f8;
+    margin: 0;
+}
+
+h1 {
+    font-family: "Playfair Display", sans-serif;
+}
+
+header {
+    background-color: gainsboro;
+    border-bottom: 2px solid black;
+    overflow: auto;
+}
+
+header h1 {
+    width: 60%;
+    float: left;
+    text-align: center;
+}
+section#main p {
+    /*display: inline-block;*/
+    height: 100px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto 0;
+}
+
+section#main {
+    height: 80%;
+    width: 100%;
+    margin: 0;
+    background: url("../image/main.jpg") border-box border-box;
+    background-size: 100% 100%;
+    font-size: 14px;
+    color: white;
+    line-height: 1.6;
+    text-align: center;
+    position: relative;
+}
+
+
+
+footer {
+    height: 10%;
+    clear: both;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #38404b;
+}
+
+footer p {
+    font-size: 12px;
+    color: #eeeeee;
+}
+
+.main {
+    width: 100%;
+}
+
+h1+.main {
+    width: 40%;
+    overflow: hidden;
+}
+.main li {
+    background-color: #eeeeee;
+    border-radius: 20px;
+    list-style-type: none;
+    line-height: 150%;
+    display: inline-block;
+    padding: 10px 20px 15px;
+    margin-right: 5px;
+    margin-top: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
+}
+
+.main li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.itemsection {
+    padding: 5px;
+}
+
+.itemsection h1 {
+    text-align: center;
+}
+
+.itemsection h2 {
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #eaeaea;
+    text-align: center;
+}
+
+.itemsection a {
+    width: 20%;
+    min-width: 150px;
+    float: left;
+    padding-right: 10px;
+    padding-left: 5%;
+}
+
+.itemsection a img {
+    width: 120px;
+    padding: 5px;
+    border: #ff5a00 solid 3px;
+    border-radius: 25px 25px;
+}
+
+.itemsection .description{
+    width: 80%;
+}
+.concise_description {
+    color: #707070;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+    overflow: hidden;
+}
+
+.detailed_description {
+    color:  #484343;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+.detailed_description strong {
+    font-size: .7em;
+}
+
+.product_characteristic{
+    overflow: hidden;
+}
+
+.product_characteristic ul li {
+    box-shadow: -5px 5px 0 -3px #eee, 5px -5px 0 -3px #eee, 5px 5px 0 -5px darkorange, 0 0 0 2px darkorange;
+    margin: 10px;
+    list-style: url("http://icons.iconarchive.com/icons/custom-icon-design/mini-2/16/Forward-icon.png") outside;
+}
+
+figure {
+    padding: 10px;
+    max-width: 300px;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: #ffe8db;
+    border: 6px solid #ff5a00;
+    border-radius: 15px 100px;
+}
+
+figure a img{
+    max-width: 250px;
+}
+
+figure figcaption {
+    padding-left: 40px;
+    text-align: center;
+}
+
+.catalog h1 {
+    text-align: center;
+}
+
+input {
+    font-size: 14px;
+    color: darkslategray;
+}
+
+input[type="text"], [type="email"], [type="number"], [type="date"] {
+    font-size: 15px;
+    height: 1em;
+    width: 200px;
+}
+
+.common_element h1 {
+    text-align: center;
+    background: linear-gradient(to right, #ffffff, #9c8e74);
+}
+
+section#delivery {
+    height: 80%;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
