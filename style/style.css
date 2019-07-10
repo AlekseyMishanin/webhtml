@@ -8,10 +8,12 @@ html, body {
 
 h1 {
     font-family: "Playfair Display", sans-serif;
+    font-size: 2em;
 }
 
 header {
-    background-color: gainsboro;
+    /*background-color: gainsboro;*/
+    background: linear-gradient(to bottom, #fff, #878797);
     border-bottom: 2px solid black;
     overflow: auto;
 }
@@ -20,6 +22,7 @@ header h1 {
     width: 60%;
     float: left;
     text-align: center;
+    text-shadow: 10px 10px 4px #8BA9B6;	
 }
 section#main p {
     /*display: inline-block;*/
@@ -30,6 +33,14 @@ section#main p {
     left: 0;
     right: 0;
     margin: auto 0;
+transition: 0.9s ease;
+}
+
+@media (min-width: 500px){
+    section#main p:hover {
+        font-size: 1.2em;
+        letter-spacing: 3px;
+    }
 }
 
 section#main {
@@ -70,7 +81,7 @@ h1+.main {
     overflow: hidden;
 }
 .main li {
-    background-color: #eeeeee;
+    background-color: #000;
     border-radius: 20px;
     list-style-type: none;
     line-height: 150%;
@@ -79,16 +90,31 @@ h1+.main {
     margin-right: 5px;
     margin-top: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
+    cursor: pointer;
+    transition: 0.6s ease;
+}
+
+.main li:hover {
+    background-color: #fff;
 }
 
 .main li a {
+    color: white;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
 }
 
+.main li:hover a {
+	color: black;
+    letter-spacing: 3px;
+}
+
 .itemsection {
     padding: 5px;
+    height: 80%;
+    width: 100%;
+    margin: 0;
 }
 
 .itemsection h1 {
@@ -102,24 +128,72 @@ h1+.main {
     background-color: #eaeaea;
     text-align: center;
 }
-
-.itemsection a {
+.itemsection .itemblock {
     width: 20%;
     min-width: 150px;
     float: left;
     padding-right: 10px;
-    padding-left: 5%;
+    box-sizing: border-box;
+    text-align: center;
+}
+.itemsection .itemblock a[id="top"] {
+    position: relative;
+    width: 100%;
+    display: block;
 }
 
-.itemsection a img {
-    width: 120px;
+.itemblock a[id="top"]::after {
+    content: '';
+    background: transparent url(../image/icons/eye_icon.svg) no-repeat center;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+.itemblock:hover > a[id="top"]::after {
+    visibility: visible;
+}
+
+.itemsection p::first-letter{
+    font-family: "Playfair Display", sans-serif;
+    font-size: 1.3em;
+    color: crimson;
+}
+
+.itemsection a[id="top"] img {
+    width: 90px;
     padding: 5px;
     border: #ff5a00 solid 3px;
     border-radius: 25px 25px;
+    /*left: 50%;
+    margin-left: -60px;*/
+    position: relative;
+}
+
+.itemsection a[id="top"]:hover > img {
+    border: #f8f8f8 solid 3px;
+    border-radius: 25px 25px;
+    opacity: .5;
+}
+.itemblock .gallery {
+    display: inline;
+}
+.gallery a {
+    display: inline-block;
+}
+.gallery a img {
+    padding-left: 5px;
+    width: 50px;
 }
 
 .itemsection .description{
-    width: 80%;
+    width: 100%;
 }
 .concise_description {
     color: #707070;
@@ -145,11 +219,11 @@ h1+.main {
     overflow: hidden;
 }
 
-.product_characteristic ul li {
-    box-shadow: -5px 5px 0 -3px #eee, 5px -5px 0 -3px #eee, 5px 5px 0 -5px darkorange, 0 0 0 2px darkorange;
+/*.product_characteristic table th {
+    box-shadow: -4px 4px 0 -2px #eee, 4px -4px 0 -2px #eee, 4px 4px 0 -2px darkorange, 0 0 0 2px darkorange;
     margin: 10px;
     list-style: url("http://icons.iconarchive.com/icons/custom-icon-design/mini-2/16/Forward-icon.png") outside;
-}
+}*/
 
 figure {
     padding: 10px;
@@ -183,6 +257,15 @@ input[type="text"], [type="email"], [type="number"], [type="date"] {
     font-size: 15px;
     height: 1em;
     width: 200px;
+}
+
+input[type="email"]:focus {
+    color: cornsilk;
+    background-color: darkred;
+}
+
+input[type="text"]{
+    text-transform: capitalize;
 }
 
 .common_element h1 {
